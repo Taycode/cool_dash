@@ -38,3 +38,5 @@ class Book(models.Model):
     user = models.ForeignKey(User, on_delete=models.DO_NOTHING)
     courses = models.ManyToManyField(Course, blank=True)
 
+    def __str__(self):
+        return self.title
